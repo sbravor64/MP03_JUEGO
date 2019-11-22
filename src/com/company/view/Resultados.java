@@ -24,8 +24,10 @@ public class Resultados {
         System.out.println("----- Clasificación Total -----");
         for (Participante p: listParticipantes) {
             System.out.format(p.getNom() + " ----> " + p.getPuntos() + " Puntos");
-            System.out.println("");
+            System.out.println(" ");
         }
+        System.out.println(" ");
     }
+
 }
 

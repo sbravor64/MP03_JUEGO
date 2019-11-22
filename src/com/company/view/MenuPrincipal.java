@@ -11,6 +11,7 @@ public class MenuPrincipal {
         Scanner sc = new Scanner(System.in);
         int opcion;
         do{
+        System.out.println("Cursa/Carrera MP03:");
         System.out.println("1. Configurar Competición - " + configuracion);
         System.out.println("2. Jugar");
         System.out.println("3. Resultados");

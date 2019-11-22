@@ -74,6 +74,7 @@ public class Jugar {
     }
 
     public void elegirVehiculo() {
+        System.out.println("Elije un vehiculo para dar comienzo la carrera:");
         System.out.println("1. Coche");
         System.out.println("2. Moto");
         System.out.println("3. Bicicleta");
