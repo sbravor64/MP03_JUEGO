@@ -5,6 +5,7 @@ import com.company.model.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import java.util.Timer;
 
 public class Jugar {
     Scanner sc = new Scanner(System.in);
@@ -29,7 +30,7 @@ public class Jugar {
 
         for (int i = 1; i <= cantPart; i++) {
             Participante p = new Participante();
-            p.setNom("participante " + i);
+            p.setNom("Participante " + i);
             participanteList.add(p);
         }
 
@@ -37,6 +38,7 @@ public class Jugar {
             int y = i+1;
             System.out.println("---------------------");
             System.out.println("Circuito " + y);
+            System.out.println("---------------------");
             for (Participante p : participanteList) {
                 p.setTime();
             }
@@ -57,6 +59,8 @@ public class Jugar {
             for (Participante p_ordenado: participanteList) {
                 System.out.format(p_ordenado.getNom() + " ----> " + "%.2f",p_ordenado.getTime());
                 System.out.print("s");
+                System.out.print(" ");
+                System.out.print(" -----> "+p_ordenado.getPuntos() + " Pts");
                 System.out.println("");
             }
 
