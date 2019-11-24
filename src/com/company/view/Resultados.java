@@ -22,8 +22,10 @@ public class Resultados {
 
     public void mostrar() {
         System.out.println("----- Clasificación Total -----");
+        int posicion = 0;
         for (Participante p: listParticipantes) {
-            System.out.format(p.getNom() + " ----> " + p.getPuntos() + " Puntos");
+            posicion++;
+            System.out.format(posicion+".º " + p.getNom() + " ----> " + p.getPuntos() + " Puntos");
             System.out.println(" ");
         }
         System.out.println(" ");

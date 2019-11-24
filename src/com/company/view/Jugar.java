@@ -5,7 +5,6 @@ import com.company.model.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-import java.util.Timer;
 
 public class Jugar {
     Scanner sc = new Scanner(System.in);
@@ -28,6 +27,7 @@ public class Jugar {
 
         int cantPart = configuracion.getCantParticipantes();
 
+
         for (int i = 1; i <= cantPart; i++) {
             Participante p = new Participante();
             p.setNom("Participante " + i);
@@ -36,9 +36,7 @@ public class Jugar {
 
         for (int i = 0; i < configuracion.getCantCircuitos() ; i++) {
             int y = i+1;
-            System.out.println("---------------------");
-            System.out.println("Circuito " + y);
-            System.out.println("---------------------");
+            System.out.println("----- Circuito " + y +" -----");
             for (Participante p : participanteList) {
                 p.setTime();
             }
@@ -55,12 +53,13 @@ public class Jugar {
                     p.setPuntos(p.getPuntos()+6);
                 }
             }
-
+            int posicion = 0;
             for (Participante p_ordenado: participanteList) {
-                System.out.format(p_ordenado.getNom() + " ----> " + "%.2f",p_ordenado.getTime());
+                posicion++;
+                System.out.format(posicion+".º " + p_ordenado.getNom() + " ----> " + "%.2f",p_ordenado.getTime());
                 System.out.print("s");
                 System.out.print(" ");
-                System.out.print(" -----> "+p_ordenado.getPuntos() + " Pts");
+                System.out.print(" ----> "+p_ordenado.getPuntos() + " Ptos.");
                 System.out.println("");
             }
 

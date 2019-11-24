@@ -33,7 +33,7 @@ public class Configuracion {
 
     @Override
     public String toString() {
-        return "Configuracion{" +
+        return "Configuración actual{" +
                 "nomJ='" + nomJ + '\'' +
                 ", cantParticipantes=" + cantParticipantes +
                 ", cantCircuitos=" + cantCircuitos +
